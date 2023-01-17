@@ -31,7 +31,6 @@ create table [Product]
 	ProductName nvarchar(max) not null,
 	ProductUnits nvarchar(max) not null,
 	ProductCost decimal(19,4) not null,
-	ProductMaxDiscount int default(0),
 	ProductManufacturer nvarchar(max) not null,
 	ProductRetailer nvarchar(max) not null,
 	ProductCategory nvarchar(max) not null,

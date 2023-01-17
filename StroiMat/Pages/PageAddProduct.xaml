@@ -1,0 +1,65 @@
+﻿<Page x:Class="StroiMat.Pages.PageAddProduct"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:StroiMat.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageAddProduct">
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="400">
+            <StackPanel>
+                <DockPanel Style="{StaticResource Margin}">
+                    <TextBlock Text="Первичный ключ:" Style="{StaticResource mainText}" HorizontalAlignment="Left"/>
+                    <TextBox x:Name="ArticleNumber" Style="{StaticResource mainTextBox}" HorizontalAlignment="Right"/>
+                </DockPanel>
+                <DockPanel Style="{StaticResource Margin}">
+                    <TextBlock Text="Название:" Style="{StaticResource mainText}"/>
+                    <TextBox x:Name="Name" Style="{StaticResource mainTextBox}" HorizontalAlignment="Right"/>
+                </DockPanel>
+                <DockPanel Style="{StaticResource Margin}">
+                    <TextBlock Text="Цена:" Style="{StaticResource mainText}"/>
+                    <TextBox x:Name="Cost" Style="{StaticResource mainTextBox}"/>
+                </DockPanel>
+                <DockPanel Style="{StaticResource Margin}">
+                    <TextBlock Text="Описание:" Style="{StaticResource mainText}"/>
+                    <TextBox x:Name="Description" Style="{StaticResource mainTextBox}"/>
+                </DockPanel>
+                <DockPanel Style="{StaticResource Margin}">
+                    <TextBlock Text="Название картинки:" Style="{StaticResource mainText}"/>
+                    <TextBox x:Name="Photo" Style="{StaticResource mainTextBox}"/>
+                </DockPanel>
+                <DockPanel Style="{StaticResource Margin}">
+                    <TextBlock Text="Единицы Измерения:" Style="{StaticResource mainText}"/>
+                    <TextBox x:Name="Units" Style="{StaticResource mainTextBox}"/>
+                </DockPanel>
+            </StackPanel>
+            
+            <StackPanel>
+                <DockPanel Style="{StaticResource Margin}">
+                    <TextBlock Text="Производитель:" Style="{StaticResource mainText}"/>
+                    <TextBox x:Name="Manufacturer" Style="{StaticResource mainTextBox}"/>
+                </DockPanel>
+                <DockPanel Style="{StaticResource Margin}">
+                    <TextBlock Text="Поставщик:" Style="{StaticResource mainText}"/>
+                    <TextBox x:Name="Retailer" Style="{StaticResource mainTextBox}"/>
+                </DockPanel>
+                <DockPanel Style="{StaticResource Margin}">
+                    <TextBlock Text="Категория:" Style="{StaticResource mainText}"/>
+                    <TextBox x:Name="Category" Style="{StaticResource mainTextBox}"/>
+                </DockPanel>
+                <DockPanel Style="{StaticResource Margin}">
+                    <TextBlock Text="Скидка:" Style="{StaticResource mainText}"/>
+                    <TextBox x:Name="Discount" Style="{StaticResource mainTextBox}"/>
+                </DockPanel>
+                <DockPanel Style="{StaticResource Margin}">
+                    <TextBlock Text="Количество на складе:" Style="{StaticResource mainText}"/>
+                    <TextBox x:Name="QuantityInStock" Style="{StaticResource mainTextBox}"/>
+                </DockPanel>
+            </StackPanel>
+            <Button x:Name="close" Style="{StaticResource mainBtn}" Content="Закрыть"/>
+        </StackPanel>
+    </Grid>
+</Page>
