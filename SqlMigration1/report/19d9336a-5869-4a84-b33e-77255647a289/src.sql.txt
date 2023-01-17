@@ -1,0 +1,12 @@
+CREATE TABLE `user` (
+  `UserID` int NOT NULL AUTO_INCREMENT,
+  `UserSurname` varchar(100) NOT NULL,
+  `UserName` varchar(100) NOT NULL,
+  `UserPatronymic` varchar(100) NOT NULL,
+  `UserLogin` text NOT NULL,
+  `UserPassword` text NOT NULL,
+  `UserRole` int NOT NULL,
+  PRIMARY KEY (`UserID`),
+  KEY `UserRole` (`UserRole`),
+  CONSTRAINT `user_ibfk_1` FOREIGN KEY (`UserRole`) REFERENCES `role` (`RoleID`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

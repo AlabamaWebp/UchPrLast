@@ -1,0 +1,11 @@
+CREATE TABLE `orderproduct` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `OrderID` int NOT NULL,
+  `ProductArticleNumber` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `Quantity` varchar(45) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`ID`),
+  KEY `orderproduct_ibfk_1` (`OrderID`),
+  KEY `orderproduct_ibfk_2` (`ProductArticleNumber`),
+  CONSTRAINT `orderproduct_ibfk_1` FOREIGN KEY (`OrderID`) REFERENCES `order1` (`OrderID`) ON DELETE CASCADE ON UPDATE RESTRICT,
+  CONSTRAINT `orderproduct_ibfk_2` FOREIGN KEY (`ProductArticleNumber`) REFERENCES `product` (`ProductArticleNumber`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

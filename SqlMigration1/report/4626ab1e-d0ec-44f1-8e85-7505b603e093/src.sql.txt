@@ -1,0 +1,13 @@
+CREATE TABLE `product` (
+  `ProductArticleNumber` varchar(100) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `ProductName` text NOT NULL,
+  `ProductDescription` text NOT NULL,
+  `ProductCategory` text NOT NULL,
+  `ProductPhoto` varchar(100) NOT NULL,
+  `ProductManufacturer` text NOT NULL,
+  `ProductCost` decimal(19,4) NOT NULL,
+  `ProductDiscountAmount` tinyint DEFAULT NULL,
+  `ProductQuantityInStock` int NOT NULL,
+  `ProductStatus` text,
+  PRIMARY KEY (`ProductArticleNumber`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

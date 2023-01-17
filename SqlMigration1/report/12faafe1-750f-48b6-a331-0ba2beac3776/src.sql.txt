@@ -1,0 +1,7 @@
+CREATE TABLE `order1` (
+  `OrderID` int NOT NULL AUTO_INCREMENT,
+  `OrderStatus` text NOT NULL,
+  `OrderDeliveryDate` datetime NOT NULL,
+  `OrderPickupPoint` text NOT NULL,
+  PRIMARY KEY (`OrderID`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

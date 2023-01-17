@@ -1,0 +1,59 @@
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+<link rel=stylesheet data-name='vs/editor/editor.main' href='../monaco/editor.main.css' type='text/css'>
+<link rel='stylesheet' type='text/css' href='../css/style.css'></link>
+<script type='text/javascript' src='../js/functions.js'></script>
+<script async='async' type='text/javascript' src='../monaco/mysql.js'></script>
+<script async='async' type='text/javascript' src='../monaco/sql.js'></script>
+<script src='../monaco/loader.js'></script>
+<script src='../monaco/editor.main.nls.js'></script>
+<script src='../monaco/editor.main.js'></script>
+</head>
+<body class='sql-body' id='scrollable-body'>
+<div id='left-side' class='left-side'><div class='panel'>
+<span class='panel-title source'>&nbsp;Source</span>
+<img tabindex='0' aria-label='Previous problem' role='button' class='nav-button nav-button-disabled' id='source_previous_problem' src='../img/previous_problem.gif' onclick='handleProblemButtonClick(-1, true)' title='Previous problem' />
+<img tabindex='0' aria-label='Next problem' role='button' class='nav-button nav-button-disabled' id='source_next_problem' src='../img/next_problem.gif' onclick='handleProblemButtonClick(1, true)' title='Next problem' />
+<img tabindex='0' aria-label='Previous bookmark' role='button' class='nav-button nav-button-disabled' id='source_previous_bookmark' src='../img/previous_bookmark.gif' onclick='handleBookmarkButtonClick(-1, true)' title='Previous bookmark' />
+<img tabindex='0' aria-label='Next bookmark' role='button' class='nav-button nav-button-disabled' id='source_next_bookmark' src='../img/next_bookmark.gif' onclick='handleBookmarkButtonClick(1, true)' title='Next bookmark' />
+<img tabindex='0' aria-label='Clear bookmarks' role='button' class='nav-button nav-button-disabled' id='source_clear_bookmarks' src='../img/clear_bookmarks.gif' onclick='handleBookmarkButtonClick(0, true)' title='Clear bookmarks' />
+<a class='raw-source-link' target='_blank' aria-label='Raw source' href='./src.sql.txt');'>Raw source</a>
+</div>
+<div class='editor-container'>
+<div id='monaco-left-side'></div><pre id='monaco-left-side-sql'>
+CREATE
+	TABLE `role`
+		(
+			`RoleID` int NOT NULL  AUTO_INCREMENT, 
+			`RoleName` varchar(100) NOT NULL, 
+			 PRIMARY KEY  (`RoleID`) 
+		)  ENGINE = InnoDB AUTO_INCREMENT = 4 DEFAULT  CHARSET = utf8mb4  COLLATE = utf8mb4_0900_ai_ci;
+</pre></div></div><div id='resize-bar' class='resize-bar'></div><div id='right-side' class='right-side'><div class='panel'>
+<span class='panel-title target'>&nbsp;Target</span>
+<img tabindex='0' aria-label='Previous problem' role='button' class='nav-button nav-button-disabled' id='target_previous_problem' src='../img/previous_problem.gif' onclick='handleProblemButtonClick(-1, false)' title='Previous problem' />
+<img tabindex='0' aria-label='Next problem' role='button' class='nav-button nav-button-disabled' id='target_next_problem' src='../img/next_problem.gif' onclick='handleProblemButtonClick(1, false)' title='Next problem' />
+<img tabindex='0' aria-label='Previous bookmark' role='button' class='nav-button nav-button-disabled' id='target_previous_bookmark' src='../img/previous_bookmark.gif' onclick='handleBookmarkButtonClick(-1, false)' title='Previous bookmark' />
+<img tabindex='0' aria-label='Next bookmark' role='button' class='nav-button nav-button-disabled' id='target_next_bookmark' src='../img/next_bookmark.gif' onclick='handleBookmarkButtonClick(1, false)' title='Next bookmark' />
+<img tabindex='0' aria-label='Clear bookmarks' role='button' class='nav-button nav-button-disabled' id='target_clear_bookmarks' src='../img/clear_bookmarks.gif' onclick='handleBookmarkButtonClick(0, false)' title='Clear bookmarks' />
+</div>
+<div class='editor-container'>
+<div id='monaco-right-side'></div><pre id='monaco-right-side-sql'>
+/*
+*   SSMA informational messages:
+*   M2SS0003: The following SQL clause was ignored during conversion: COLLATE = utf8mb4_0900_ai_ci.
+*/
+
+CREATE TABLE TRADE.[role]
+(
+	RoleID int NOT NULL IDENTITY(4, 1), 
+	RoleName nvarchar(100) NOT NULL, 
+	CONSTRAINT [PK_role_RoleID] PRIMARY KEY (RoleID)
+)
+GO</pre></div></div><script>
+var sourceLanguage = 'mysql';
+var sourceEditorSelections = [{start:25, end:66, guid:'3903ff97-fad0-4cf3-b988-5dfdad7284d8', reflection:['32b680ff-6dbc-448e-805b-139d06c08875'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:68, end:104, guid:'d3f3c466-3684-4a42-9a27-425212ea047e', reflection:['c642714d-ddfb-419c-9c63-0d2db9c5ae8d'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:106, end:135, guid:'24368c76-5da3-43d8-b207-190da218d821', reflection:['0a81f545-e340-49e6-913f-8bb1bc79e755'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:7, end:232, guid:'4dd949e6-9dba-4f0c-b2be-b96ae92a6687', reflection:['9e0fdd2b-3c66-4429-ab75-a46d038e1b80'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:0, end:233, guid:'ee30899b-6161-4bce-8d82-aa114f7f3ad4', reflection:['535875b2-b667-41eb-8d0f-4e3fd8e364b9'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:0, end:233, guid:'48c207c1-6565-4882-8436-ac5e1ad2020e', reflection:['535875b2-b667-41eb-8d0f-4e3fd8e364b9'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]}];
+var targetLanguage = 'sql';
+var targetEditorSelections = [{start:168, end:204, guid:'32b680ff-6dbc-448e-805b-139d06c08875', reflection:['3903ff97-fad0-4cf3-b988-5dfdad7284d8'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:206, end:239, guid:'c642714d-ddfb-419c-9c63-0d2db9c5ae8d', reflection:['d3f3c466-3684-4a42-9a27-425212ea047e'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:241, end:291, guid:'0a81f545-e340-49e6-913f-8bb1bc79e755', reflection:['24368c76-5da3-43d8-b207-190da218d821'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:148, end:293, guid:'9e0fdd2b-3c66-4429-ab75-a46d038e1b80', reflection:['4dd949e6-9dba-4f0c-b2be-b96ae92a6687'], convmessInfoIds:[], convmessWarningIds:[], convmessErrorIds:[]},{start:0, end:293, guid:'535875b2-b667-41eb-8d0f-4e3fd8e364b9', reflection:['ee30899b-6161-4bce-8d82-aa114f7f3ad4','48c207c1-6565-4882-8436-ac5e1ad2020e'], convmessInfoIds:['M2SS0003'], convmessWarningIds:[], convmessErrorIds:[]}];
+</script><script src='../js/code.js'></script></body></html>
