@@ -2,13 +2,7 @@ create database [Trade]
 go
 use [Trade]
 go
-create table [EmplyeeRole]
-(
-	RoleID int primary key identity,
-	RoleName varchar(max) not null,
-)
-go
-create table [CostumerRole]
+create table [UserRoles]
 (
 	RoleID int primary key identity,
 	RoleName varchar(max) not null,
@@ -20,37 +14,15 @@ create table [PickupPoints]
 	PickupPointName varchar(max),
 )
 go
-create table [Emplyee]
+create table [User]
 (
-	EmplyeeID int primary key identity,
+	UserID int primary key identity,
 	UserSurname nvarchar(100) not null,
 	UserName nvarchar(100) not null,
 	UserPatronymic nvarchar(100) not null,
 	UserLogin nvarchar(max) not null,
 	UserPassword nvarchar(max) not null,
-	UserRoleID int foreign key references [EmplyeeRole](RoleID) not null,
-)
-go
-create table [Costumer]
-(
-	CostumerID int primary key identity,
-	UserSurname nvarchar(100) not null,
-	UserName nvarchar(100) not null,
-	UserPatronymic nvarchar(100) not null,
-	UserLogin nvarchar(max) not null,
-	UserPassword nvarchar(max) not null,
-	UserRoleID int foreign key references [CostumerRole](RoleID) not null,
-)
-go
-create table [Order]
-(
-	OrderID int primary key identity,
-	OrderDate datetime not null,
-	OrderDeliveryDate datetime not null,
-	OrderPickupPoint int foreign key references PickupPoints(PickupPointID) not null,
-	CostumerCredentials varchar(max),
-	OrderDeliveryCode int not null,
-	OrderStatus nvarchar(max) not null,
+	UserRoleID int foreign key references UserRoles(RoleID) not null,
 )
 go
 create table [Product]
@@ -69,13 +41,32 @@ create table [Product]
 	ProductPhotoPath varchar(max) default(null),
 )
 go
+create table [Order]
+(
+	OrderID int primary key identity,
+	OrderContainer varchar(max) not null,
+	OrderUserID int foreign key references [User](UserID) default(null),
+	OrderPickupPoint int foreign key references PickupPoints(PickupPointID) not null,
+	OrderTotal int not null,
+	OrderDeliveryCode int not null,
+	OrderDate datetime not null,
+	OrderDeliveryDate datetime not null,
+	OrderStatus nvarchar(max) not null,
+)
+go
 create table [OrderProduct]
 (
 	ID int primary key identity,
 	OrderID int foreign key references [Order](OrderID) not null,
-	EmployeeID int foreign key references [Emplyee](EmplyeeID) not null,
-	CostumerID int foreign key references [Costumer](CostumerID),
 	ProductArticleNumber nvarchar(100) foreign key references Product(ProductArticleNumber) not null,
 	ProductCount int not null,
+)
+go
+create table [Cart]
+(
+	OrderID int primary key identity,
+	OrderContainer varchar(max) not null,
+	OrderUserID int foreign key references [User](UserID) default(null),
+	OrderTotal int not null,
 )
 go
