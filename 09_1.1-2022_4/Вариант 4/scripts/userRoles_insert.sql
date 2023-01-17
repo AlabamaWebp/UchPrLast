@@ -1,0 +1,1 @@
+insert into Role (RoleName) values ('Администратор'), ('Менеджер'), ('Клиент')

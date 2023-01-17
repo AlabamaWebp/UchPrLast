@@ -5,7 +5,7 @@ go
 create table [Role]
 (
 	RoleID int primary key identity,
-	RoleName nvarchar(100) not null
+	RoleName nvarchar(max) not null
 )
 go
 create table PickupPoints
@@ -42,14 +42,14 @@ create table Product
 	ProductName nvarchar(max) not null,
 	ProductUnits nvarchar(max) not null,
 	ProductCost decimal(19,4) not null,
-	ProductMaxDiscount tinyint null,
+	ProductMaxDiscount int default(0),
 	ProductManufacturer nvarchar(max) not null,
 	ProductRetailer nvarchar(max) not null,
 	ProductCategory nvarchar(max) not null,
-	ProductDiscountAmount tinyint null,
+	ProductDiscountAmount int default(0),
 	ProductQuantityInStock int not null,
 	ProductDescription nvarchar(max) not null,
-	ProductPhoto image not null,
+	ProductPhotoPath varchar(max) null,
 	--ProductStatus nvarchar(max) not null,
 )
 go
