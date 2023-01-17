@@ -2,27 +2,44 @@ create database [Trade]
 go
 use [Trade]
 go
-create table [Role]
+create table [EmplyeeRole]
 (
 	RoleID int primary key identity,
-	RoleName nvarchar(max) not null
+	RoleName varchar(max) not null,
 )
 go
-create table PickupPoints
+create table [CostumerRole]
+(
+	RoleID int primary key identity,
+	RoleName varchar(max) not null,
+)
+go
+create table [PickupPoints]
 (
 	PickupPointID int primary key identity,
 	PickupPointName varchar(max),
 )
 go
-create table [User]
+create table [Emplyee]
 (
-	UserID int primary key identity,
+	EmplyeeID int primary key identity,
 	UserSurname nvarchar(100) not null,
 	UserName nvarchar(100) not null,
 	UserPatronymic nvarchar(100) not null,
 	UserLogin nvarchar(max) not null,
 	UserPassword nvarchar(max) not null,
-	UserRole int foreign key references [Role](RoleID) not null
+	UserRoleID int foreign key references [EmplyeeRole](RoleID) not null,
+)
+go
+create table [Costumer]
+(
+	CostumerID int primary key identity,
+	UserSurname nvarchar(100) not null,
+	UserName nvarchar(100) not null,
+	UserPatronymic nvarchar(100) not null,
+	UserLogin nvarchar(max) not null,
+	UserPassword nvarchar(max) not null,
+	UserRoleID int foreign key references [CostumerRole](RoleID) not null,
 )
 go
 create table [Order]
@@ -36,7 +53,7 @@ create table [Order]
 	OrderStatus nvarchar(max) not null,
 )
 go
-create table Product
+create table [Product]
 (
 	ProductArticleNumber nvarchar(100) primary key,
 	ProductName nvarchar(max) not null,
@@ -49,14 +66,15 @@ create table Product
 	ProductDiscountAmount int default(0),
 	ProductQuantityInStock int not null,
 	ProductDescription nvarchar(max) not null,
-	ProductPhotoPath varchar(max) null,
-	--ProductStatus nvarchar(max) not null,
+	ProductPhotoPath varchar(max) default(null),
 )
 go
-create table OrderProduct
+create table [OrderProduct]
 (
 	ID int primary key identity,
 	OrderID int foreign key references [Order](OrderID) not null,
+	EmployeeID int foreign key references [Emplyee](EmplyeeID) not null,
+	CostumerID int foreign key references [Costumer](CostumerID),
 	ProductArticleNumber nvarchar(100) foreign key references Product(ProductArticleNumber) not null,
 	ProductCount int not null,
 )
