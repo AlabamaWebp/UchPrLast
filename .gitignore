@@ -1,2 +1,7 @@
 /StroiMat/App.config
 /StroiMat/AppData
+/StroiMat/*.config
+App.config
+AppData
+bin
+obj
