@@ -63,6 +63,16 @@
     <Property Name="ProductPhotoPath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="OrderProduct" Relationship="Self.FK__OrderProd__Produ__34C8D9D1" FromRole="Product" ToRole="OrderProduct" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
   <EntityType Name="User">
     <Key>
       <PropertyRef Name="UserID" />
@@ -164,6 +174,7 @@
     <EntitySet Name="OrderProduct" EntityType="Self.OrderProduct" />
     <EntitySet Name="PickupPoints" EntityType="Self.PickupPoints" />
     <EntitySet Name="Product" EntityType="Self.Product" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="User" EntityType="Self.User" />
     <EntitySet Name="UserRoles" EntityType="Self.UserRoles" />
     <AssociationSet Name="FK__Cart__OrderUserI__37A5467C" Association="Self.FK__Cart__OrderUserI__37A5467C">

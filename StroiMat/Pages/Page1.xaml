@@ -12,7 +12,7 @@
         <StackPanel HorizontalAlignment="Center"
                     VerticalAlignment="Center" Orientation="Horizontal">
             <StackPanel Orientation="Vertical">
-                <Button Content="Товары" Style="{StaticResource mainBtn}" Name="btnProduct"/>
+                <Button Content="Товары" Style="{StaticResource mainBtn}" Name="btnProduct" Click="btnProduct_Click"/>
                 <Button Content="Добавить товар" Style="{StaticResource mainBtn}" Name="btnAddProduct"/>
                 <Button Content="Корзина" Style="{StaticResource mainBtn}" Name="btnCart"/>
             </StackPanel>

@@ -48,3 +48,7 @@ D:\Projects\UchPrLast\StroiMat\obj\Debug\StroiMat.csproj.CoreCompileInputs.cache
 D:\Projects\UchPrLast\StroiMat\obj\Debug\StroiMat.csproj.CopyComplete
 D:\Projects\UchPrLast\StroiMat\obj\Debug\StroiMat.exe
 D:\Projects\UchPrLast\StroiMat\obj\Debug\StroiMat.pdb
+D:\Projects\UchPrLast\StroiMat\obj\Debug\Pages\CreateProductPage.g.cs
+D:\Projects\UchPrLast\StroiMat\obj\Debug\Pages\PageProduct.g.cs
+D:\Projects\UchPrLast\StroiMat\obj\Debug\Pages\CreateProductPage.baml
+D:\Projects\UchPrLast\StroiMat\obj\Debug\Pages\PageProduct.baml

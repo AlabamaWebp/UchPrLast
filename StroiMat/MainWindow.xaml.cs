@@ -30,5 +30,10 @@ namespace StroiMat
 
             frmMain.Navigate(new Page1());
         }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            frmMain.Navigate(new Page1());
+        }
     }
 }

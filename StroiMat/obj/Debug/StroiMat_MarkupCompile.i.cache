@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Projects\UchPrLast\StroiMat\App.xaml
-3353536837
-2-1302128269
-201348917006
+4-328700222
+2-875807670
+22-1331501242
 18-442856099
-MainWindow.xaml;Pages\CreateProductPage.xaml;Pages\Page1.xaml;
+MainWindow.xaml;Pages\CreateProductPage.xaml;Pages\Page1.xaml;Pages\PageProduct.xaml;
 
-True
+False
 

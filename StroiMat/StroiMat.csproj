@@ -72,20 +72,73 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="AppData\Cart.cs">
+      <DependentUpon>ModelTrade.tt</DependentUpon>
+    </Compile>
     <Compile Include="AppData\ConnectToDB.cs" />
     <Compile Include="AppData\FrameObj.cs" />
+    <Compile Include="AppData\ModelTrade.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTrade.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\ModelTrade.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTrade.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\ModelTrade.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelTrade.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\Order.cs">
+      <DependentUpon>ModelTrade.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\OrderProduct.cs">
+      <DependentUpon>ModelTrade.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\PickupPoints.cs">
+      <DependentUpon>ModelTrade.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\Product.cs">
+      <DependentUpon>ModelTrade.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\sysdiagrams.cs">
+      <DependentUpon>ModelTrade.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\User.cs">
+      <DependentUpon>ModelTrade.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AppData\UserRoles.cs">
+      <DependentUpon>ModelTrade.tt</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\CreateProductPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PageProduct.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\CreateProductPage.xaml.cs">
+      <DependentUpon>CreateProductPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Page1.xaml.cs">
       <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PageProduct.xaml.cs">
+      <DependentUpon>PageProduct.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -104,6 +157,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="AppData\ModelTrade.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelTrade.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AppData\ModelTrade.edmx.diagram">
+      <DependentUpon>ModelTrade.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -119,9 +179,20 @@
   <ItemGroup>
     <Resource Include="Resources\logo.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppData\ModelTrade.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelTrade.edmx</DependentUpon>
+      <LastGenOutput>ModelTrade.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="AppData\ModelTrade.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelTrade.edmx</DependentUpon>
+      <LastGenOutput>ModelTrade.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

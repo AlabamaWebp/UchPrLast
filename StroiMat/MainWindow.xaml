@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Background="#76e383" Orientation="Horizontal">
             <Image Source=".\\Resources\logo.png" Width="50"/>
-            <Button x:Name="btnBack" Width="150" Height="30" FontSize="17"
+            <Button x:Name="btnBack" Width="150" Height="30" FontSize="17" Click="btnBack_Click"
                     Foreground="White" Background="#498c51" Content="Назад" Margin="20 0 0 0" />
         </StackPanel>
         <StackPanel VerticalAlignment="Center" Grid.Row="1">

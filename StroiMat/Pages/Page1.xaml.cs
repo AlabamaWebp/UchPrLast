@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StroiMat.AppData;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,11 @@ namespace StroiMat.Pages
         public Page1()
         {
             InitializeComponent();
+        }
+
+        private void btnProduct_Click(object sender, RoutedEventArgs e)
+        {
+            FrameObj.frameMain.Navigate(new PageProduct());
         }
     }
 }
