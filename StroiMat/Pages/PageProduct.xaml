@@ -34,14 +34,13 @@
                                     </Style>
                                 </ListBoxItem.Resources>-->
                                 <StackPanel Orientation="Vertical">
-                                    <TextBlock Name="StringImg"
+                                    <!--<TextBlock Name="StringImg"
                                                Visibility="Hidden"
-                                               Text=""/>
-                                    <Image Source="" />
+                                               Text="{Binding ProductPhotoPath}"/>-->
+                                    <Image Source="{Binding PhotoPath, ProductPhotoPath}" />
                                     <TextBlock Text="{Binding ProductName}"
                                                Name="TxtNameProd"
                                                />
-                                    
                                 </StackPanel>
                             </ListBoxItem>
                         </DataTemplate>

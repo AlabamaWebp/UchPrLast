@@ -30,7 +30,20 @@ namespace StroiMat.AppData
         public Nullable<int> ProductDiscountAmount { get; set; }
         public int ProductQuantityInStock { get; set; }
         public string ProductDescription { get; set; }
-        public string ProductPhotoPath { get; set; }
+        public string ProductPhotoPath 
+        {
+            get
+            {
+                if (ProductPhotoPath.Length > 0)
+                {
+                    return @".." + ProductPhotoPath.ToString();
+                }
+                else
+                {
+                    return @"..\agents\picture.png";
+                }
+            }
+        }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderProduct> OrderProduct { get; set; }

@@ -11,7 +11,7 @@ namespace StroiMat.Pages
     /// </summary>
     public partial class PageProduct : Page
     {
-
+        public string PhotoPath = ".//AllImg/logo.png";
         public PageProduct()
         {
             InitializeComponent();

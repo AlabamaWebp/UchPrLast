@@ -193,6 +193,16 @@
       <DependentUpon>ModelTrade.edmx</DependentUpon>
       <LastGenOutput>ModelTrade.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\AllImg\2G3280.jpg" />
+    <Resource Include="Resources\AllImg\3L7RCZ.jpg" />
+    <Resource Include="Resources\AllImg\3XBOTN.jpeg" />
+    <Resource Include="Resources\AllImg\BPV4MM.jpg" />
+    <Resource Include="Resources\AllImg\F895RB.jpg" />
+    <Resource Include="Resources\AllImg\JVL42J.jpg" />
+    <Resource Include="Resources\AllImg\MIO8YV.jpg" />
+    <Resource Include="Resources\AllImg\PMEZMH.jpg" />
+    <Resource Include="Resources\AllImg\S72AM3.jpg" />
+    <Resource Include="Resources\AllImg\UER2QD.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
