@@ -30,7 +30,6 @@ namespace StroiMat.AppData
         public virtual DbSet<OrderProduct> OrderProduct { get; set; }
         public virtual DbSet<PickupPoints> PickupPoints { get; set; }
         public virtual DbSet<Product> Product { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<UserRoles> UserRoles { get; set; }
     }

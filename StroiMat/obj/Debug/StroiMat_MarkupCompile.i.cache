@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Projects\UchPrLast\StroiMat\obj\Debug\
+D:\Projects\UchPrLast\StroiMat\obj\Debug\
 StroiMat
 none
 false
 DEBUG;TRACE
-E:\Projects\UchPrLast\StroiMat\App.xaml
-3973340012
+D:\Projects\UchPrLast\StroiMat\App.xaml
+3353536837
 2-1302128269
-211573998869
-181176256906
-MainWindow.xaml;Pages\Page1.xaml;Pages\PageAddProduct.xaml;
+201348917006
+18-442856099
+MainWindow.xaml;Pages\CreateProductPage.xaml;Pages\Page1.xaml;
 
 True
 
